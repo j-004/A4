@@ -13,10 +13,10 @@ public class PersonTest {
     void validPerson() {
         Person person = new Person(
             "36!@&*XYP",
-            "Amisha",
-            "Pradhan",
+            "Emily",
+            "Smith",
             "124|La Trobe Street|Melbourne|Victoria|Australia",
-            "28-02-2005"
+            "05-05-2005"
             );
         assertTrue(person.addPerson());
     }
@@ -26,10 +26,10 @@ public class PersonTest {
     void invalidBirthday() {
         Person person = new Person(
             "36!@&*XYP",
-            "Amisha",
-            "Pradhan",
+            "Emily",
+            "Smith",
             "124|La Trobe Street|Melbourne|Victoria|Australia",
-            "2005-02-28"
+            "2005-05-05"
             );
         assertFalse(person.addPerson());
     }
@@ -39,10 +39,10 @@ public class PersonTest {
     void invalidAddress() {
         Person person = new Person(
             "36!@&*XYP",
-            "Amisha",
-            "Pradhan",
+            "Emily",
+            "Smith",
             "124|La Trobe Street|Melbourne|Tasmania|Australia",
-            "28-02-2005"
+            "05-05-2005"
             );
         assertFalse(person.addPerson());
     }
@@ -52,10 +52,10 @@ public class PersonTest {
     void invalidAddressFormat() {
         Person person = new Person(
             "36!@&*XYP",
-            "Amisha",
-            "Pradhan",
+            "Emily",
+            "Smith",
             "124|La Trobe Street|Melbourne|Victoria",
-            "28-02-2005"
+            "05-05-2005"
             );
         assertFalse(person.addPerson());
     }
@@ -65,10 +65,10 @@ public class PersonTest {
     void invalidNoSpecialChar() {
         Person person = new Person(
             "36lmno12YP",
-            "Amisha",
-            "Pradhan",
+            "Emily",
+            "Smith",
             "124|La Trobe Street|Melbourne|Tasmania|Australia",
-            "28-02-2005"
+            "05-05-2005"
             );
         assertFalse(person.addPerson());
     }
